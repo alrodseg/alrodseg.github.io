@@ -1,0 +1,33 @@
+{
+  "name": "alrodseg.github.io",
+  "version": "1.0.0",
+  "description": "Personal project",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alrodseg/alrodseg.github.io.git"
+  },
+  "author": "Alejandro Rodriguez Segrelles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alrodseg/alrodseg.github.io/issues"
+  },
+  "homepage": "https://github.com/alrodseg/alrodseg.github.io#readme",
+  "dependencies": {
+    "@nuxtjs/style-resources": "^0.1.2",
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "lorem-ipsum": "^2.0.1",
+    "nuxt": "^2.6.2",
+    "ts-node": "^8.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "^2.6.2",
+    "@types/lorem-ipsum": "^1.0.2",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "nodemon": "^1.18.11"
+  }
+}
