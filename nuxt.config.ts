@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV !== "production";
 const config: NuxtConfiguration = {
     dev: isDev,
     devTools: isDev,
-    srcDir: 'app/',
+    srcDir: 'src/',
 
     // No SSR
     mode: "spa",
