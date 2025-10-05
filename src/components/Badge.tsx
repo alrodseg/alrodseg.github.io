@@ -39,5 +39,9 @@ export const Badge = ({ text, category, logo, url, flag }: BadgeProps) => {
     );
   }
 
-  return <span className={className}>{content}</span>;
+  return (
+    <span className={`${className} hover:scale-105 cursor-default`}>
+      {content}
+    </span>
+  );
 };
