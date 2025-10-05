@@ -20,7 +20,7 @@ function App() {
     }
 
     window.scrollTo({
-      top: experiencesRef.current.offsetTop - 50,
+      top: experiencesRef.current.offsetTop - 24,
       behavior: "smooth",
     });
   };

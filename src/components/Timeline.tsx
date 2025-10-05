@@ -58,7 +58,7 @@ export const Timeline = ({
   return (
     <div
       ref={containerRef}
-      className="mb-12 overflow-x-auto pb-4 no-scrollbar animate-fadeIn"
+      className="mb-12 overflow-x-auto no-scrollbar animate-fadeIn"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
