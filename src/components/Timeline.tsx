@@ -31,7 +31,9 @@ export const Timeline = ({
     if (!container || !isHovered || window.innerWidth > container.scrollWidth)
       return;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+
       throttle(() => {
         const rect = container.getBoundingClientRect();
         const relativeX = e.clientX - rect.left; // X position inside the div
@@ -41,8 +43,8 @@ export const Timeline = ({
       }, 8); // ~120fps throttle (8ms)
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("pointermove", handleMouseMove);
+    return () => window.removeEventListener("pointermove", handleMouseMove);
   }, [isHovered]);
 
   useEffect(() => {
