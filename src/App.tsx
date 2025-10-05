@@ -5,7 +5,6 @@ import { Badge } from "./components/Badge";
 import { Timeline } from "./components/Timeline.tsx";
 import linkedinLogo from "./assets/linkedin-logo.svg";
 import githubLogo from "./assets/github-logo.svg";
-import mapPinIcon from "./assets/map-pin-icon.svg";
 import envelopeIcon from "./assets/envelope-icon.svg";
 
 function App() {
@@ -34,7 +33,7 @@ function App() {
           to { opacity: 1; transform: translateY(0); }
         }
         .animate-fadeIn {
-          animation: fadeIn 0.4s ease-out;
+          animation: fadeIn 0.5s ease-out;
         }
       `}</style>
 
@@ -48,11 +47,6 @@ function App() {
             <p className="text-2xl text-blue-600 font-medium mb-6">
               {resumeData.title}
             </p>
-
-            <div className="flex items-center justify-center gap-2 mb-6 text-gray-600">
-              <img src={mapPinIcon} alt={"location icon"} className="w-5 h-5" />
-              <span>{resumeData.contact.location}</span>
-            </div>
 
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               {resumeData.summary}
