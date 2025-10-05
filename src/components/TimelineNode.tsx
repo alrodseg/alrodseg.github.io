@@ -4,15 +4,9 @@ interface TimelineNodeProps {
   job: JobData;
   isActive: boolean;
   onClick: () => void;
-  isLast: boolean;
 }
 
-export const TimelineNode = ({
-  job,
-  isActive,
-  onClick,
-  isLast,
-}: TimelineNodeProps) => (
+export const TimelineNode = ({ job, isActive, onClick }: TimelineNodeProps) => (
   <div className="flex items-center flex-shrink-0">
     <div
       className="flex flex-col items-center cursor-pointer group pt-2"
@@ -35,11 +29,5 @@ export const TimelineNode = ({
         <div className="text-xs text-gray-500 mt-1">{job.dates}</div>
       </div>
     </div>
-    {!isLast && (
-      <div className="flex items-center mx-4">
-        <div className="h-0.5 w-16 bg-gray-300" />
-        <div className="w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-8 border-l-gray-300" />
-      </div>
-    )}
   </div>
 );
