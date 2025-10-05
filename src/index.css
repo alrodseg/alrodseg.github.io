@@ -5,3 +5,7 @@
 body {
     font-family: "Twemoji Country Flags", "Sansation", Arial, sans-serif;
 }
+
+@utility no-scrollbar {
+    @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}

@@ -1,5 +1,6 @@
 import { resumeData } from "../resumeData.ts";
 import { TimelineNode } from "./TimelineNode.tsx";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface TimelineProps {
   activeJobId: number;
@@ -12,9 +13,56 @@ export const Timeline = ({
   activeJobId,
   onClickJob,
 }: TimelineProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const throttleTimeout = useRef<number | null>(null);
+
+  const throttle = useCallback((callback: () => void, delay: number) => {
+    if (throttleTimeout.current) return;
+    throttleTimeout.current = window.setTimeout(() => {
+      callback();
+      throttleTimeout.current && clearTimeout(throttleTimeout.current);
+      throttleTimeout.current = null;
+    }, delay);
+  }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !isHovered || window.innerWidth > container.scrollWidth)
+      return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      throttle(() => {
+        const rect = container.getBoundingClientRect();
+        const relativeX = e.clientX - rect.left; // X position inside the div
+        const percentX = Math.min(Math.max(relativeX / rect.width, 0), 1); // Clamp 0–1
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        container.scrollLeft = percentX * maxScroll;
+      }, 8); // ~120fps throttle (8ms)
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isHovered]);
+
+  useEffect(() => {
+    if (
+      !containerRef.current ||
+      window.innerWidth > containerRef.current.scrollWidth
+    ) {
+      return;
+    }
+    containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+  }, []);
+
   return (
-    <div className="mb-12 overflow-x-auto pb-4">
-      <div className="flex items-center justify-start min-w-max">
+    <div
+      ref={containerRef}
+      className="mb-12 overflow-x-auto pb-4 no-scrollbar animate-fadeIn"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="flex items-center justify-center min-w-max">
         {resumeData.experience.map((job, idx) => (
           <>
             <TimelineNode
