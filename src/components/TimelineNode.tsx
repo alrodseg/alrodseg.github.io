@@ -15,13 +15,13 @@ export const TimelineNode = ({
 }: TimelineNodeProps) => (
   <div className="flex items-center flex-shrink-0">
     <div
-      className="flex flex-col items-center cursor-pointer group"
+      className="flex flex-col items-center cursor-pointer group pt-2"
       onClick={onClick}
     >
       <img
         src={job.logo}
         alt={job.company}
-        className={`w-12 h-12 rounded-full mb-3 transition-all ${isActive ? "ring-4 ring-blue-500 scale-110" : "ring-2 ring-gray-300 group-hover:ring-blue-400"}`}
+        className={`w-12 h-12 object-fit rounded-full mb-3 transition-all ${isActive ? "ring-4 ring-blue-500 scale-110" : "ring-2 ring-gray-300 group-hover:ring-blue-400"}`}
       />
       <div
         className={`w-4 h-4 rounded-full transition-all ${isActive ? "bg-blue-600 scale-125" : "bg-gray-400 group-hover:bg-blue-400"}`}
