@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { resumeData } from "./resumeData";
 import { JobDetails } from "./components/JobDetails";
 import { Badge } from "./components/Badge";
@@ -13,6 +13,18 @@ function App() {
     resumeData.experience[resumeData.experience.length - 1].id,
   );
   const activeJob = resumeData.experience.find((job) => job.id === activeJobId);
+  const experiencesRef = useRef<HTMLHeadingElement>(null);
+
+  const handleClickJob = () => {
+    if (!experiencesRef.current) {
+      return null;
+    }
+
+    window.scrollTo({
+      top: experiencesRef.current.offsetTop - 50,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -84,12 +96,19 @@ function App() {
 
       {/* Experience Timeline */}
       <section className="max-w-6xl mx-auto px-6 py-8 md:py-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2
+          ref={experiencesRef}
+          className="text-3xl font-bold text-gray-900 mb-12 text-center"
+        >
           Experience Timeline
         </h2>
 
         {/* Timeline */}
-        <Timeline activeJobId={activeJobId} setActiveJobId={setActiveJobId} />
+        <Timeline
+          onClickJob={handleClickJob}
+          activeJobId={activeJobId}
+          setActiveJobId={setActiveJobId}
+        />
 
         {/* Job Details */}
         {activeJob && <JobDetails job={activeJob} />}
