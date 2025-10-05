@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20" height="20" viewBox="15 14 99 99">
+  <style>
+    .st2{fill:none;stroke:currentColor;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
+  </style>
+	<g id="Layer_2">
+    <path d="M64 108.7S31.7 75.4 31.7 51.5a32.3 32.3 0 1 1 64.6 0C96.3 66.2 81.7 87 72.1 99" class="st2"/>
+		<circle cx="64" cy="51.9" r="14.6" class="st2"/>
+  </g>
+</svg>

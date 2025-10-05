@@ -11,9 +11,8 @@ export const resumeData = {
     "Experienced frontend engineer specializing in React, Vue, and TypeScript with a proven track record of building scalable web applications and leading technical initiatives across multiple industries.",
   contact: {
     email: "alejandrorodseg@gmail.com",
-    phone: "+34 662575359",
     location: "Granada, Spain",
-    github: "https://github.com/alejandrorodseg",
+    github: "https://github.com/alrodseg",
     linkedin: "https://linkedin.com/in/alejandrorodseg",
   },
   experience: [
@@ -181,7 +180,7 @@ export const resumeData = {
       },
       {
         name: "DataDog",
-        logo: "https://imgix.datadoghq.com/img/dd_logo_n_70x75.png",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original.svg",
         url: "https://www.datadoghq.com/",
       },
     ],
@@ -192,12 +191,20 @@ export const resumeData = {
       { name: "Czech (Elemental)", flag: "🇨🇿" },
     ],
   },
-  education: {
-    degree: "BS in Informatics Engineering",
-    school: "Universitat Politècnica de València",
-    location: "Valencia, Spain",
-    dates: "2012 - 2017",
-    thesis:
-      "Performance analysis of GPU virtualization in low-power systems (10/10 with honors)",
-  },
+  education: [
+    {
+      degree: "BSc in Informatics Engineering",
+      school: "Universitat Politècnica de València",
+      location: "Valencia, Spain",
+      dates: "2012 - 2017",
+      notes:
+        "Diploma thesis: Performance analysis of GPU virtualization in low-power systems (10/10 with honors)",
+    },
+    {
+      degree: "Erasmus+ Exchange Programme",
+      school: "Politechnika Wrocławska",
+      location: "Wrocław, Poland",
+      dates: "Oct 2015 - Jun 2016",
+    },
+  ],
 };
