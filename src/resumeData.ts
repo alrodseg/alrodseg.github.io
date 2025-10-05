@@ -1,3 +1,9 @@
+import stroerLogo from './assets/stroer-logo.svg';
+import abbLogo from './assets/abb-logo.svg';
+import sinnerSchraderLogo from './assets/sinnerschrader-logo.svg';
+import glovoLogo from './assets/glovo-logo.svg';
+import manychatLogo from './assets/manychat-logo.svg';
+
 export const resumeData = {
     name: "Alejandro Rodriguez Segrelles",
     title: "Senior Frontend Engineer",
@@ -18,7 +24,7 @@ export const resumeData = {
             location: "Opava, Czech Republic",
             description: "Participated in advertising-related project development. Focused on productivity and rapid learning with Node.js and Angular 4.",
             skills: ["Node.js", "Angular", "TypeScript"],
-            logo: "/public/stroer-logo.svg"
+            logo: stroerLogo
         },
         {
             id: 4,
@@ -28,7 +34,7 @@ export const resumeData = {
             location: "Ostrava, Czech Republic",
             description: "Solely responsible for Front-End of Business Intelligence solution based on Microsoft's Power BI tools. Created custom data visualizations for KPIs including complex charts and maps.",
             skills: ["JavaScript", "Power BI", "Data Visualization"],
-            logo: "/public/abb-logo.svg"
+            logo: abbLogo
         },
         {
             id: 3,
@@ -38,7 +44,7 @@ export const resumeData = {
             location: "Prague, Czech Republic",
             description: "Developed solutions for large corporate clients including German telecom, banking, and automotive companies. Built projects with various tech stacks: LAMP to React migration, Nuxt for banking, Vue for fast-food, React Native for Austrian market, and COVID-19 vaccine platform.",
             skills: ["React", "Vue", "Nuxt", "React Native", "JavaScript"],
-            logo: "/public/sinnerschrader-logo.svg"
+            logo: sinnerSchraderLogo
         },
         {
             id: 2,
@@ -48,7 +54,7 @@ export const resumeData = {
             location: "Barcelona, Spain",
             description: "Developed web applications for Glovo partners (restaurants, shops). Led initiatives including sound notification improvements, design system implementation, and endpoint optimization. Collaborated with designers and data analysts.",
             skills: ["Vue", "TypeScript", "Vuex", "Pinia", "Jest", "Cypress", "GitHub Actions", "Jenkins", "Figma"],
-            logo: "/public/glovo-logo.svg"
+            logo: glovoLogo
         },
         {
             id: 1,
@@ -58,7 +64,7 @@ export const resumeData = {
             location: "Barcelona, Spain",
             description: "Led WhatsApp automation experience contributing to significant revenue growth. Shifted focus to onboarding users across Instagram, Facebook, Telegram, and TikTok. Mentored team members, managed technical debt, and collaborated with cross-functional teams.",
             skills: ["React", "TypeScript", "Svelte"],
-            logo: "/public/manychat-logo.svg"
+            logo: manychatLogo
         }
     ],
     skills: {
