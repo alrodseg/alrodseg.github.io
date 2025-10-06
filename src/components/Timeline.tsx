@@ -1,3 +1,4 @@
+import React from "react";
 import { resumeData } from "../resumeData.ts";
 import { TimelineNode } from "./TimelineNode.tsx";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -66,9 +67,8 @@ export const Timeline = ({
     >
       <div className="flex items-center justify-center min-w-max">
         {resumeData.experience.map((job, idx) => (
-          <>
+          <React.Fragment key={job.id}>
             <TimelineNode
-              key={job.id}
               job={job}
               isActive={job.id === activeJobId}
               onClick={() => {
@@ -82,7 +82,7 @@ export const Timeline = ({
                 <div className="w-0 h-0 border-t-4 border-t-transparent border-b-4 border-b-transparent border-l-8 border-l-gray-300" />
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
