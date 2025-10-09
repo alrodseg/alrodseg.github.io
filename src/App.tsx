@@ -54,13 +54,15 @@ function App() {
 
             {/* CTAs */}
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href={`mailto:${resumeData.contact.email}`}
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:scale-105 transition-all shadow-md hover:shadow-lg"
+              <button
+                className="cursor-pointer group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:scale-105 transition-all shadow-md hover:shadow-lg"
+                onClick={() =>
+                  (window.location.href = `mailto:${resumeData.contact.email}`)
+                }
               >
                 <img src={envelopeIcon} alt={"email"} className="w-5 h-5" />
                 <span>Email Me</span>
-              </a>
+              </button>
               <a
                 href={resumeData.contact.github}
                 target="_blank"
