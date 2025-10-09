@@ -145,7 +145,7 @@ export const resumeData = {
         url: "https://vuex.vuejs.org/",
       },
       Pinia: {
-        logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pinialogo.svg",
+        logo: "https://cdn.worldvectorlogo.com/logos/pinia-1.svg",
         url: "https://pinia.vuejs.org/",
       },
       Nuxt: {
