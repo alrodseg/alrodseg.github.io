@@ -123,15 +123,17 @@ function App() {
                 Programming Languages
               </h3>
               <div className="flex flex-wrap gap-2">
-                {resumeData.skills.programmingLanguages.map((skill, idx) => (
-                  <Badge
-                    key={idx}
-                    text={skill.name}
-                    category="programmingLanguages"
-                    logo={skill.logo}
-                    url={skill.url}
-                  />
-                ))}
+                {Object.entries(resumeData.skills.programmingLanguages).map(
+                  ([name, { logo, url }], idx) => (
+                    <Badge
+                      key={idx}
+                      text={name}
+                      category="programmingLanguages"
+                      logo={logo}
+                      url={url}
+                    />
+                  ),
+                )}
               </div>
             </div>
 
@@ -140,15 +142,17 @@ function App() {
                 Frameworks & Libraries
               </h3>
               <div className="flex flex-wrap gap-2">
-                {resumeData.skills.frameworks.map((skill, idx) => (
-                  <Badge
-                    key={idx}
-                    text={skill.name}
-                    category="frameworks"
-                    logo={skill.logo}
-                    url={skill.url}
-                  />
-                ))}
+                {Object.entries(resumeData.skills.frameworks).map(
+                  ([name, { logo, url }], idx) => (
+                    <Badge
+                      key={idx}
+                      text={name}
+                      category="frameworks"
+                      logo={logo}
+                      url={url}
+                    />
+                  ),
+                )}
               </div>
             </div>
 
@@ -157,15 +161,17 @@ function App() {
                 Tools & Technologies
               </h3>
               <div className="flex flex-wrap gap-2">
-                {resumeData.skills.tools.map((skill, idx) => (
-                  <Badge
-                    key={idx}
-                    text={skill.name}
-                    category="tools"
-                    logo={skill.logo}
-                    url={skill.url}
-                  />
-                ))}
+                {Object.entries(resumeData.skills.tools).map(
+                  ([name, { logo, url }], idx) => (
+                    <Badge
+                      key={idx}
+                      text={name}
+                      category="tools"
+                      logo={logo}
+                      url={url}
+                    />
+                  ),
+                )}
               </div>
             </div>
 

@@ -105,127 +105,104 @@ export const resumeData = {
     },
   ],
   skills: {
-    programmingLanguages: [
-      {
-        name: "TypeScript",
+    programmingLanguages: {
+      TypeScript: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         url: "https://www.typescriptlang.org/",
       },
-      {
-        name: "JavaScript",
+      JavaScript: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
-      {
-        name: "HTML5",
+      HTML5: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
-      {
-        name: "CSS3",
+      CSS3: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
-    ],
-    frameworks: [
-      {
-        name: "React",
+    },
+    frameworks: {
+      React: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         url: "https://react.dev/",
       },
-      {
-        name: "Redux",
+      Redux: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
         url: "https://redux.js.org/",
       },
-      {
-        name: "Next",
+      Next: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         url: "https://nextjs.org/",
       },
-      {
-        name: "Vue",
+      Vue: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
         url: "https://vuejs.org/",
       },
-      {
-        name: "Vuex",
+      Vuex: {
         logo: "https://cdn.worldvectorlogo.com/logos/vuex-1.svg",
         url: "https://vuex.vuejs.org/",
       },
-      {
-        name: "Pinia",
+      Pinia: {
         logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pinialogo.svg",
         url: "https://pinia.vuejs.org/",
       },
-      {
-        name: "Nuxt",
+      Nuxt: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
         url: "https://nuxt.com/",
       },
-      {
-        name: "Svelte",
+      Svelte: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
         url: "https://svelte.dev/",
       },
-      {
-        name: "Angular",
+      Angular: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg",
         url: "https://angular.io/",
       },
-    ],
-    tools: [
-      {
-        name: "Storybook",
+    },
+    tools: {
+      Storybook: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg",
         url: "https://storybook.js.org/",
       },
-      {
-        name: "Jest",
+      Jest: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
         url: "https://jestjs.io/",
       },
-      {
-        name: "Cypress",
+      Cypress: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
         url: "https://www.cypress.io/",
       },
-      {
-        name: "Webpack",
+      Webpack: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
         url: "https://webpack.js.org/",
       },
-      {
-        name: "GraphQL",
+      GraphQL: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
         url: "https://graphql.org/",
       },
-      {
-        name: "GitHub Actions",
+      "GitHub Actions": {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
         url: "https://github.com/features/actions",
       },
-      {
-        name: "Jenkins",
+      Jenkins: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
         url: "https://www.jenkins.io/",
       },
-      {
-        name: "Figma",
+      Figma: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         url: "https://www.figma.com/",
       },
-      {
-        name: "DataDog",
+      DataDog: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datadog/datadog-original.svg",
         url: "https://www.datadoghq.com/",
       },
-      {
-        name: "Sentry",
+      Sentry: {
         logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sentry/sentry-original.svg",
         url: "https://sentry.io/",
       },
-    ],
+    },
     spokenLanguages: [
       { name: "Spanish (Native)", flag: "🇪🇸" },
       { name: "Valencian (Native)", flag: "🇪🇸" },

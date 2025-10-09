@@ -1,6 +1,6 @@
 import { Badge } from "./Badge.tsx";
 import type { JobData } from "../types";
-import { getSkillCategory } from "../helpers.ts";
+import { getSkillCategory, getSkillLogo } from "../helpers.ts";
 
 interface JobDetailsProps {
   job: JobData;
@@ -22,7 +22,12 @@ export const JobDetails = ({ job }: JobDetailsProps) => {
       <p className="text-gray-700 leading-relaxed mb-6">{job.description}</p>
       <div className="flex flex-wrap gap-2">
         {job.skills.map((skill: string, idx: number) => (
-          <Badge key={idx} text={skill} category={getSkillCategory(skill)} />
+          <Badge
+            key={idx}
+            text={skill}
+            logo={getSkillLogo(skill)}
+            category={getSkillCategory(skill)}
+          />
         ))}
       </div>
     </div>
